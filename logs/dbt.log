@@ -1557,3 +1557,448 @@ grant select on all views in schema analytics.dbt to role analyst
 21:40:29.734773 [info ] [MainThread]: 
 21:40:29.735147 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=1 SKIP=0 TOTAL=8
 21:40:29.735760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10928bd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10928b9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093f0700>]}
+
+
+============================== 2022-01-08 21:46:47.705272 | af6f681c-11bd-4bf8-9d5e-af2bbbd7b1e7 ==============================
+21:46:47.705272 [info ] [MainThread]: Running with dbt=1.0.1
+21:46:47.706123 [debug] [MainThread]: running dbt with arguments Namespace(record_timing_info=None, debug=None, log_format=None, write_json=None, use_colors=None, printer_width=None, warn_error=None, version_check=None, partial_parse=None, single_threaded=False, use_experimental_parser=None, static_parser=None, profiles_dir='/Users/ajaydavid/.dbt', send_anonymous_usage_stats=None, fail_fast=None, event_buffer_size=None, project_dir=None, profile=None, target=None, vars='{}', log_cache_events=False, threads=None, select=None, exclude=None, selector_name=None, state=None, defer=None, full_refresh=False, cls=<class 'dbt.task.run.RunTask'>, which='run', rpc_method='run')
+21:46:47.706358 [debug] [MainThread]: Tracking: tracking
+21:46:47.706808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db40490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db404c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db406d0>]}
+21:46:47.731644 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+21:46:47.732097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'af6f681c-11bd-4bf8-9d5e-af2bbbd7b1e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db3c130>]}
+21:46:47.768231 [debug] [MainThread]: Parsing macros/catalog.sql
+21:46:47.771371 [debug] [MainThread]: Parsing macros/adapters.sql
+21:46:47.817062 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+21:46:47.820738 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+21:46:47.825697 [debug] [MainThread]: Parsing macros/materializations/view.sql
+21:46:47.826980 [debug] [MainThread]: Parsing macros/materializations/table.sql
+21:46:47.829888 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+21:46:47.837980 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+21:46:47.838976 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+21:46:47.842563 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+21:46:47.844787 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+21:46:47.846339 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+21:46:47.862316 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+21:46:47.873079 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+21:46:47.884206 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+21:46:47.888407 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+21:46:47.890118 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+21:46:47.891841 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+21:46:47.896030 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+21:46:47.906781 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+21:46:47.908231 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+21:46:47.917759 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+21:46:47.932042 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+21:46:47.938619 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+21:46:47.941163 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+21:46:47.947570 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+21:46:47.948793 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+21:46:47.951156 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+21:46:47.953188 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+21:46:47.959504 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+21:46:47.975053 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+21:46:47.976448 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+21:46:47.978657 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+21:46:47.980560 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+21:46:47.981411 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+21:46:47.981927 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+21:46:47.982567 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+21:46:47.983806 [debug] [MainThread]: Parsing macros/etc/statement.sql
+21:46:47.987764 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+21:46:47.997229 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+21:46:47.999369 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+21:46:48.002862 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+21:46:48.013275 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+21:46:48.016304 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+21:46:48.021484 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+21:46:48.030683 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+21:46:48.043228 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+21:46:48.294386 [debug] [MainThread]: 1699: static parser successfully parsed example/my_first_dbt_model.sql
+21:46:48.306405 [debug] [MainThread]: 1699: static parser successfully parsed example/playing_with_tests.sql
+21:46:48.309997 [debug] [MainThread]: 1699: static parser successfully parsed example/snowflake_cumulative_orders_by_date.sql
+21:46:48.313545 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+21:46:48.317469 [debug] [MainThread]: 1603: static parser failed on example/incremental_dates.sql
+21:46:48.324263 [debug] [MainThread]: 1602: parser fallback to jinja rendering on example/incremental_dates.sql
+21:46:48.325349 [debug] [MainThread]: 1699: static parser successfully parsed example/snowflake_nation_customer_count.sql
+21:46:48.328786 [debug] [MainThread]: 1699: static parser successfully parsed example/snowflake_customer_purchases.sql
+21:46:48.332127 [debug] [MainThread]: 1603: static parser failed on new/dates.sql
+21:46:48.335158 [debug] [MainThread]: 1602: parser fallback to jinja rendering on new/dates.sql
+21:46:48.486504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'af6f681c-11bd-4bf8-9d5e-af2bbbd7b1e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dbd1a60>]}
+21:46:48.492643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'af6f681c-11bd-4bf8-9d5e-af2bbbd7b1e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc99100>]}
+21:46:48.492925 [info ] [MainThread]: Found 8 models, 18 tests, 0 snapshots, 0 analyses, 179 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:46:48.494480 [info ] [MainThread]: 
+21:46:48.494879 [debug] [MainThread]: Acquiring new snowflake connection "master"
+21:46:48.495938 [debug] [ThreadPool]: Acquiring new snowflake connection "list_analytics"
+21:46:48.508221 [debug] [ThreadPool]: Using snowflake connection "list_analytics"
+21:46:48.508474 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    show terse schemas in database analytics
+    limit 10000
+21:46:48.508625 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:46:49.532805 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.02 seconds
+21:46:49.534615 [debug] [ThreadPool]: On list_analytics: Close
+21:46:49.676731 [debug] [ThreadPool]: Acquiring new snowflake connection "list_analytics_dbt"
+21:46:49.684246 [debug] [ThreadPool]: Using snowflake connection "list_analytics_dbt"
+21:46:49.684499 [debug] [ThreadPool]: On list_analytics_dbt: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "connection_name": "list_analytics_dbt"} */
+
+    show terse objects in analytics.dbt
+21:46:49.684697 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+21:46:50.465182 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.78 seconds
+21:46:50.467312 [debug] [ThreadPool]: On list_analytics_dbt: Close
+21:46:50.605055 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+21:46:50.605591 [info ] [MainThread]: 
+21:46:50.610038 [debug] [Thread-1  ]: Began running node model.learn_dbt.dates
+21:46:50.610437 [info ] [Thread-1  ]: 1 of 8 START incremental model dbt.dates........................................ [RUN]
+21:46:50.611000 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.learn_dbt.dates"
+21:46:50.611215 [debug] [Thread-1  ]: Began compiling node model.learn_dbt.dates
+21:46:50.611442 [debug] [Thread-1  ]: Compiling model.learn_dbt.dates
+21:46:50.617745 [debug] [Thread-1  ]: Writing injected SQL for node "model.learn_dbt.dates"
+21:46:50.618421 [debug] [Thread-1  ]: finished collecting timing info
+21:46:50.618663 [debug] [Thread-1  ]: Began executing node model.learn_dbt.dates
+21:46:50.668572 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.dates"
+21:46:50.668878 [debug] [Thread-1  ]: On model.learn_dbt.dates: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.dates"} */
+
+    
+
+      create or replace temporary table analytics.dbt.dates__dbt_tmp  as
+      (
+
+select *
+from "SNOWFLAKE_SAMPLE_DATA"."TPCDS_SF10TCL"."DATE_DIM"
+where d_date <= current_date
+order by d_date desc
+
+
+    and d_date > (select max(d_date) from analytics.dbt.dates)
+
+      );
+21:46:50.669077 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:46:51.379268 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01a1801a-0000-6584-0000-00016cc24715
+21:46:51.379626 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 10 at position 4 unexpected 'and'.
+21:46:51.380051 [debug] [Thread-1  ]: finished collecting timing info
+21:46:51.380291 [debug] [Thread-1  ]: On model.learn_dbt.dates: Close
+21:46:51.521423 [debug] [Thread-1  ]: Database Error in model dates (models/new/dates.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 10 at position 4 unexpected 'and'.
+21:46:51.521920 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'af6f681c-11bd-4bf8-9d5e-af2bbbd7b1e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ff67c40>]}
+21:46:51.522392 [error] [Thread-1  ]: 1 of 8 ERROR creating incremental model dbt.dates............................... [[31mERROR[0m in 0.91s]
+21:46:51.522890 [debug] [Thread-1  ]: Finished running node model.learn_dbt.dates
+21:46:51.523194 [debug] [Thread-1  ]: Began running node model.learn_dbt.incremental_dates
+21:46:51.523617 [info ] [Thread-1  ]: 2 of 8 START incremental model dbt.incremental_dates............................ [RUN]
+21:46:51.524159 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.learn_dbt.incremental_dates"
+21:46:51.524376 [debug] [Thread-1  ]: Began compiling node model.learn_dbt.incremental_dates
+21:46:51.524586 [debug] [Thread-1  ]: Compiling model.learn_dbt.incremental_dates
+21:46:51.528258 [debug] [Thread-1  ]: Writing injected SQL for node "model.learn_dbt.incremental_dates"
+21:46:51.528924 [debug] [Thread-1  ]: finished collecting timing info
+21:46:51.529169 [debug] [Thread-1  ]: Began executing node model.learn_dbt.incremental_dates
+21:46:51.533064 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.incremental_dates"
+21:46:51.533312 [debug] [Thread-1  ]: On model.learn_dbt.incremental_dates: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.incremental_dates"} */
+
+    
+
+      create or replace temporary table analytics.dbt.incremental_dates__dbt_tmp  as
+      (
+
+select *
+from "SNOWFLAKE_SAMPLE_DATA"."TPCDS_SF10TCL"."TIME_DIM"
+where to_time(concat(T_HOUR::varchar, ':', T_MINUTE, ':', T_SECOND)) <= current_time
+
+
+    and t_time > (select max(t_time) from analytics.dbt.incremental_dates)
+
+      );
+21:46:51.533548 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:46:53.439469 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.91 seconds
+21:46:53.450877 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.incremental_dates"
+21:46:53.451118 [debug] [Thread-1  ]: On model.learn_dbt.incremental_dates: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.incremental_dates"} */
+
+    describe table analytics.dbt.incremental_dates__dbt_tmp
+21:46:53.553014 [debug] [Thread-1  ]: SQL status: SUCCESS 10 in 0.1 seconds
+21:46:53.559042 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.incremental_dates"
+21:46:53.559270 [debug] [Thread-1  ]: On model.learn_dbt.incremental_dates: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.incremental_dates"} */
+
+    describe table analytics.dbt.incremental_dates
+21:46:53.653039 [debug] [Thread-1  ]: SQL status: SUCCESS 10 in 0.09 seconds
+21:46:53.663557 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.incremental_dates"
+21:46:53.663789 [debug] [Thread-1  ]: On model.learn_dbt.incremental_dates: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.incremental_dates"} */
+
+    describe table "ANALYTICS"."DBT"."INCREMENTAL_DATES"
+21:46:53.786188 [debug] [Thread-1  ]: SQL status: SUCCESS 10 in 0.12 seconds
+21:46:53.811834 [debug] [Thread-1  ]: Writing runtime SQL for node "model.learn_dbt.incremental_dates"
+21:46:53.813631 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.incremental_dates"
+21:46:53.813843 [debug] [Thread-1  ]: On model.learn_dbt.incremental_dates: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.incremental_dates"} */
+begin;
+21:46:53.921649 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.11 seconds
+21:46:53.922204 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.incremental_dates"
+21:46:53.922503 [debug] [Thread-1  ]: On model.learn_dbt.incremental_dates: merge into analytics.dbt.incremental_dates as DBT_INTERNAL_DEST
+        using analytics.dbt.incremental_dates__dbt_tmp as DBT_INTERNAL_SOURCE
+        on 
+            DBT_INTERNAL_SOURCE.t_time = DBT_INTERNAL_DEST.t_time
+        
+
+    
+    when matched then update set
+        "T_TIME_SK" = DBT_INTERNAL_SOURCE."T_TIME_SK","T_TIME_ID" = DBT_INTERNAL_SOURCE."T_TIME_ID","T_TIME" = DBT_INTERNAL_SOURCE."T_TIME","T_HOUR" = DBT_INTERNAL_SOURCE."T_HOUR","T_MINUTE" = DBT_INTERNAL_SOURCE."T_MINUTE","T_SECOND" = DBT_INTERNAL_SOURCE."T_SECOND","T_AM_PM" = DBT_INTERNAL_SOURCE."T_AM_PM","T_SHIFT" = DBT_INTERNAL_SOURCE."T_SHIFT","T_SUB_SHIFT" = DBT_INTERNAL_SOURCE."T_SUB_SHIFT","T_MEAL_TIME" = DBT_INTERNAL_SOURCE."T_MEAL_TIME"
+    
+
+    when not matched then insert
+        ("T_TIME_SK", "T_TIME_ID", "T_TIME", "T_HOUR", "T_MINUTE", "T_SECOND", "T_AM_PM", "T_SHIFT", "T_SUB_SHIFT", "T_MEAL_TIME")
+    values
+        ("T_TIME_SK", "T_TIME_ID", "T_TIME", "T_HOUR", "T_MINUTE", "T_SECOND", "T_AM_PM", "T_SHIFT", "T_SUB_SHIFT", "T_MEAL_TIME")
+
+;
+21:46:54.653062 [debug] [Thread-1  ]: SQL status: SUCCESS 415 in 0.73 seconds
+21:46:54.653531 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.incremental_dates"
+21:46:54.653855 [debug] [Thread-1  ]: On model.learn_dbt.incremental_dates: commit;
+21:46:54.922475 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.27 seconds
+21:46:54.924953 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.incremental_dates"
+21:46:54.925179 [debug] [Thread-1  ]: On model.learn_dbt.incremental_dates: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.incremental_dates"} */
+
+        grant select on analytics.dbt.incremental_dates to role analyst
+21:46:55.036021 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.11 seconds
+21:46:55.047729 [debug] [Thread-1  ]: finished collecting timing info
+21:46:55.048024 [debug] [Thread-1  ]: On model.learn_dbt.incremental_dates: Close
+21:46:55.204675 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'af6f681c-11bd-4bf8-9d5e-af2bbbd7b1e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dee9700>]}
+21:46:55.205239 [info ] [Thread-1  ]: 2 of 8 OK created incremental model dbt.incremental_dates....................... [[32mSUCCESS 1[0m in 3.68s]
+21:46:55.205722 [debug] [Thread-1  ]: Finished running node model.learn_dbt.incremental_dates
+21:46:55.206031 [debug] [Thread-1  ]: Began running node model.learn_dbt.my_first_dbt_model
+21:46:55.206518 [info ] [Thread-1  ]: 3 of 8 START table model dbt.first_model........................................ [RUN]
+21:46:55.207084 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.learn_dbt.my_first_dbt_model"
+21:46:55.207301 [debug] [Thread-1  ]: Began compiling node model.learn_dbt.my_first_dbt_model
+21:46:55.207504 [debug] [Thread-1  ]: Compiling model.learn_dbt.my_first_dbt_model
+21:46:55.210033 [debug] [Thread-1  ]: Writing injected SQL for node "model.learn_dbt.my_first_dbt_model"
+21:46:55.210603 [debug] [Thread-1  ]: finished collecting timing info
+21:46:55.210821 [debug] [Thread-1  ]: Began executing node model.learn_dbt.my_first_dbt_model
+21:46:55.221347 [debug] [Thread-1  ]: Writing runtime SQL for node "model.learn_dbt.my_first_dbt_model"
+21:46:55.222585 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.my_first_dbt_model"
+21:46:55.222802 [debug] [Thread-1  ]: On model.learn_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.my_first_dbt_model"} */
+
+
+      create or replace transient table analytics.dbt.first_model  as
+      (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+    union all
+    select 3 as id
+
+)
+
+select *
+from source_data
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+      );
+21:46:55.222991 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:46:56.327096 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.1 seconds
+21:46:56.330339 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.my_first_dbt_model"
+21:46:56.330600 [debug] [Thread-1  ]: On model.learn_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.my_first_dbt_model"} */
+
+        grant select on analytics.dbt.first_model to role analyst
+21:46:56.435430 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.1 seconds
+21:46:56.437782 [debug] [Thread-1  ]: finished collecting timing info
+21:46:56.438073 [debug] [Thread-1  ]: On model.learn_dbt.my_first_dbt_model: Close
+21:46:56.617387 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'af6f681c-11bd-4bf8-9d5e-af2bbbd7b1e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11007a880>]}
+21:46:56.617951 [info ] [Thread-1  ]: 3 of 8 OK created table model dbt.first_model................................... [[32mSUCCESS 1[0m in 1.41s]
+21:46:56.618438 [debug] [Thread-1  ]: Finished running node model.learn_dbt.my_first_dbt_model
+21:46:56.618725 [debug] [Thread-1  ]: Began running node model.learn_dbt.playing_with_tests
+21:46:56.619308 [info ] [Thread-1  ]: 4 of 8 START table model dbt.playing_with_tests................................. [RUN]
+21:46:56.619917 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.learn_dbt.playing_with_tests"
+21:46:56.620167 [debug] [Thread-1  ]: Began compiling node model.learn_dbt.playing_with_tests
+21:46:56.620423 [debug] [Thread-1  ]: Compiling model.learn_dbt.playing_with_tests
+21:46:56.621937 [debug] [Thread-1  ]: Writing injected SQL for node "model.learn_dbt.playing_with_tests"
+21:46:56.622530 [debug] [Thread-1  ]: finished collecting timing info
+21:46:56.622753 [debug] [Thread-1  ]: Began executing node model.learn_dbt.playing_with_tests
+21:46:56.625321 [debug] [Thread-1  ]: Writing runtime SQL for node "model.learn_dbt.playing_with_tests"
+21:46:56.626151 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.playing_with_tests"
+21:46:56.626382 [debug] [Thread-1  ]: On model.learn_dbt.playing_with_tests: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.playing_with_tests"} */
+
+
+      create or replace transient table analytics.dbt.playing_with_tests  as
+      (select * 
+from "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF100"."CUSTOMER"
+      );
+21:46:56.626579 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:47:14.476524 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 17.85 seconds
+21:47:14.479194 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.playing_with_tests"
+21:47:14.479418 [debug] [Thread-1  ]: On model.learn_dbt.playing_with_tests: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.playing_with_tests"} */
+
+        grant select on analytics.dbt.playing_with_tests to role analyst
+21:47:14.616544 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.14 seconds
+21:47:14.618213 [debug] [Thread-1  ]: finished collecting timing info
+21:47:14.618468 [debug] [Thread-1  ]: On model.learn_dbt.playing_with_tests: Close
+21:47:14.760332 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'af6f681c-11bd-4bf8-9d5e-af2bbbd7b1e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ff8e1c0>]}
+21:47:14.760874 [info ] [Thread-1  ]: 4 of 8 OK created table model dbt.playing_with_tests............................ [[32mSUCCESS 1[0m in 18.14s]
+21:47:14.761349 [debug] [Thread-1  ]: Finished running node model.learn_dbt.playing_with_tests
+21:47:14.761641 [debug] [Thread-1  ]: Began running node model.learn_dbt.snowflake_cumulative_orders_by_date
+21:47:14.762116 [info ] [Thread-1  ]: 5 of 8 START table model dbt.snowflake_cumulative_orders_by_date................ [RUN]
+21:47:14.762761 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.learn_dbt.snowflake_cumulative_orders_by_date"
+21:47:14.763024 [debug] [Thread-1  ]: Began compiling node model.learn_dbt.snowflake_cumulative_orders_by_date
+21:47:14.763276 [debug] [Thread-1  ]: Compiling model.learn_dbt.snowflake_cumulative_orders_by_date
+21:47:14.764728 [debug] [Thread-1  ]: Writing injected SQL for node "model.learn_dbt.snowflake_cumulative_orders_by_date"
+21:47:14.765314 [debug] [Thread-1  ]: finished collecting timing info
+21:47:14.765539 [debug] [Thread-1  ]: Began executing node model.learn_dbt.snowflake_cumulative_orders_by_date
+21:47:14.768818 [debug] [Thread-1  ]: Writing runtime SQL for node "model.learn_dbt.snowflake_cumulative_orders_by_date"
+21:47:14.769914 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.snowflake_cumulative_orders_by_date"
+21:47:14.770132 [debug] [Thread-1  ]: On model.learn_dbt.snowflake_cumulative_orders_by_date: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.snowflake_cumulative_orders_by_date"} */
+
+
+      create or replace transient table analytics.dbt.snowflake_cumulative_orders_by_date  as
+      (SELECT
+    o.o_orderdate,
+    sum(o.o_totalprice) as cumulative_sales
+FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."ORDERS" o
+GROUP BY o.o_orderdate
+ORDER BY o.o_orderdate DESC
+      );
+21:47:14.770329 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:47:16.614357 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.84 seconds
+21:47:16.617714 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.snowflake_cumulative_orders_by_date"
+21:47:16.617983 [debug] [Thread-1  ]: On model.learn_dbt.snowflake_cumulative_orders_by_date: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.snowflake_cumulative_orders_by_date"} */
+
+        grant select on analytics.dbt.snowflake_cumulative_orders_by_date to role analyst
+21:47:16.716094 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.1 seconds
+21:47:16.718449 [debug] [Thread-1  ]: finished collecting timing info
+21:47:16.718742 [debug] [Thread-1  ]: On model.learn_dbt.snowflake_cumulative_orders_by_date: Close
+21:47:16.862470 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'af6f681c-11bd-4bf8-9d5e-af2bbbd7b1e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110074f70>]}
+21:47:16.862957 [info ] [Thread-1  ]: 5 of 8 OK created table model dbt.snowflake_cumulative_orders_by_date........... [[32mSUCCESS 1[0m in 2.10s]
+21:47:16.863358 [debug] [Thread-1  ]: Finished running node model.learn_dbt.snowflake_cumulative_orders_by_date
+21:47:16.863602 [debug] [Thread-1  ]: Began running node model.learn_dbt.snowflake_customer_purchases
+21:47:16.863994 [info ] [Thread-1  ]: 6 of 8 START table model dbt.snowflake_customer_purchases....................... [RUN]
+21:47:16.864499 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.learn_dbt.snowflake_customer_purchases"
+21:47:16.864706 [debug] [Thread-1  ]: Began compiling node model.learn_dbt.snowflake_customer_purchases
+21:47:16.864906 [debug] [Thread-1  ]: Compiling model.learn_dbt.snowflake_customer_purchases
+21:47:16.866281 [debug] [Thread-1  ]: Writing injected SQL for node "model.learn_dbt.snowflake_customer_purchases"
+21:47:16.866838 [debug] [Thread-1  ]: finished collecting timing info
+21:47:16.867052 [debug] [Thread-1  ]: Began executing node model.learn_dbt.snowflake_customer_purchases
+21:47:16.869461 [debug] [Thread-1  ]: Writing runtime SQL for node "model.learn_dbt.snowflake_customer_purchases"
+21:47:16.870606 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.snowflake_customer_purchases"
+21:47:16.870813 [debug] [Thread-1  ]: On model.learn_dbt.snowflake_customer_purchases: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.snowflake_customer_purchases"} */
+
+
+      create or replace transient table analytics.dbt.snowflake_customer_purchases  as
+      (SELECT
+    c.c_custkey,
+    c.c_name,
+    c.c_nationkey as nation,
+    sum(o.o_totalprice) as total_order_price
+FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."CUSTOMER" c
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."ORDERS" o
+ON c.c_custkey = o.o_custkey
+
+group by
+    c.c_custkey,
+    c.c_name,
+    c.c_nationkey
+      );
+21:47:16.871003 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:47:18.628120 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.76 seconds
+21:47:18.631410 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.snowflake_customer_purchases"
+21:47:18.631666 [debug] [Thread-1  ]: On model.learn_dbt.snowflake_customer_purchases: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.snowflake_customer_purchases"} */
+
+        grant select on analytics.dbt.snowflake_customer_purchases to role analyst
+21:47:18.723771 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.09 seconds
+21:47:18.725952 [debug] [Thread-1  ]: finished collecting timing info
+21:47:18.726325 [debug] [Thread-1  ]: On model.learn_dbt.snowflake_customer_purchases: Close
+21:47:18.862278 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'af6f681c-11bd-4bf8-9d5e-af2bbbd7b1e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100742e0>]}
+21:47:18.862776 [info ] [Thread-1  ]: 6 of 8 OK created table model dbt.snowflake_customer_purchases.................. [[32mSUCCESS 1[0m in 2.00s]
+21:47:18.863187 [debug] [Thread-1  ]: Finished running node model.learn_dbt.snowflake_customer_purchases
+21:47:18.863440 [debug] [Thread-1  ]: Began running node model.learn_dbt.snowflake_nation_customer_count
+21:47:18.863841 [info ] [Thread-1  ]: 7 of 8 START table model dbt.snowflake_nation_customer_count.................... [RUN]
+21:47:18.864396 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.learn_dbt.snowflake_nation_customer_count"
+21:47:18.864624 [debug] [Thread-1  ]: Began compiling node model.learn_dbt.snowflake_nation_customer_count
+21:47:18.864835 [debug] [Thread-1  ]: Compiling model.learn_dbt.snowflake_nation_customer_count
+21:47:18.866282 [debug] [Thread-1  ]: Writing injected SQL for node "model.learn_dbt.snowflake_nation_customer_count"
+21:47:18.866925 [debug] [Thread-1  ]: finished collecting timing info
+21:47:18.867145 [debug] [Thread-1  ]: Began executing node model.learn_dbt.snowflake_nation_customer_count
+21:47:18.870285 [debug] [Thread-1  ]: Writing runtime SQL for node "model.learn_dbt.snowflake_nation_customer_count"
+21:47:18.871539 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.snowflake_nation_customer_count"
+21:47:18.871791 [debug] [Thread-1  ]: On model.learn_dbt.snowflake_nation_customer_count: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.snowflake_nation_customer_count"} */
+
+
+      create or replace transient table analytics.dbt.snowflake_nation_customer_count  as
+      (SELECT
+    n.n_nationkey,
+    n.n_name,
+    count(*) as total_customers
+
+FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."NATION" n
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."CUSTOMER" c
+ON n.n_nationkey = c.c_nationkey
+
+group by
+    n.n_nationkey,
+    n.n_name
+      );
+21:47:18.871992 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:47:20.166781 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.29 seconds
+21:47:20.170060 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.snowflake_nation_customer_count"
+21:47:20.170312 [debug] [Thread-1  ]: On model.learn_dbt.snowflake_nation_customer_count: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.snowflake_nation_customer_count"} */
+
+        grant select on analytics.dbt.snowflake_nation_customer_count to role analyst
+21:47:20.285059 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.11 seconds
+21:47:20.287064 [debug] [Thread-1  ]: finished collecting timing info
+21:47:20.287361 [debug] [Thread-1  ]: On model.learn_dbt.snowflake_nation_customer_count: Close
+21:47:20.425242 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'af6f681c-11bd-4bf8-9d5e-af2bbbd7b1e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e017dc0>]}
+21:47:20.425820 [info ] [Thread-1  ]: 7 of 8 OK created table model dbt.snowflake_nation_customer_count............... [[32mSUCCESS 1[0m in 1.56s]
+21:47:20.426320 [debug] [Thread-1  ]: Finished running node model.learn_dbt.snowflake_nation_customer_count
+21:47:20.426611 [debug] [Thread-1  ]: Began running node model.learn_dbt.my_second_dbt_model
+21:47:20.427063 [info ] [Thread-1  ]: 8 of 8 START table model dbt.my_second_dbt_model................................ [RUN]
+21:47:20.427678 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.learn_dbt.my_second_dbt_model"
+21:47:20.427925 [debug] [Thread-1  ]: Began compiling node model.learn_dbt.my_second_dbt_model
+21:47:20.428168 [debug] [Thread-1  ]: Compiling model.learn_dbt.my_second_dbt_model
+21:47:20.431743 [debug] [Thread-1  ]: Writing injected SQL for node "model.learn_dbt.my_second_dbt_model"
+21:47:20.432347 [debug] [Thread-1  ]: finished collecting timing info
+21:47:20.432588 [debug] [Thread-1  ]: Began executing node model.learn_dbt.my_second_dbt_model
+21:47:20.434902 [debug] [Thread-1  ]: Writing runtime SQL for node "model.learn_dbt.my_second_dbt_model"
+21:47:20.435790 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.my_second_dbt_model"
+21:47:20.436014 [debug] [Thread-1  ]: On model.learn_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.my_second_dbt_model"} */
+
+
+      create or replace transient table analytics.dbt.my_second_dbt_model  as
+      (-- Use the `ref` function to select from other models
+
+select *
+from analytics.dbt.first_model
+      );
+21:47:20.436225 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:47:21.510611 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.07 seconds
+21:47:21.513886 [debug] [Thread-1  ]: Using snowflake connection "model.learn_dbt.my_second_dbt_model"
+21:47:21.514144 [debug] [Thread-1  ]: On model.learn_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "learn-dbt", "target_name": "dev", "node_id": "model.learn_dbt.my_second_dbt_model"} */
+
+        grant select on analytics.dbt.my_second_dbt_model to role analyst
+21:47:21.625352 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.11 seconds
+21:47:21.627713 [debug] [Thread-1  ]: finished collecting timing info
+21:47:21.628007 [debug] [Thread-1  ]: On model.learn_dbt.my_second_dbt_model: Close
+21:47:21.907547 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'af6f681c-11bd-4bf8-9d5e-af2bbbd7b1e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ff5f8b0>]}
+21:47:21.908058 [info ] [Thread-1  ]: 8 of 8 OK created table model dbt.my_second_dbt_model........................... [[32mSUCCESS 1[0m in 1.48s]
+21:47:21.908467 [debug] [Thread-1  ]: Finished running node model.learn_dbt.my_second_dbt_model
+21:47:21.909778 [debug] [MainThread]: Acquiring new snowflake connection "master"
+21:47:21.910476 [info ] [MainThread]: 
+21:47:21.910885 [info ] [MainThread]: Finished running 2 incremental models, 6 table models in 33.42s.
+21:47:21.911314 [debug] [MainThread]: Connection 'master' was properly closed.
+21:47:21.911522 [debug] [MainThread]: Connection 'model.learn_dbt.my_second_dbt_model' was properly closed.
+21:47:21.918380 [info ] [MainThread]: 
+21:47:21.918906 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+21:47:21.919304 [info ] [MainThread]: 
+21:47:21.919735 [error] [MainThread]: [33mDatabase Error in model dates (models/new/dates.sql)[0m
+21:47:21.920170 [error] [MainThread]:   001003 (42000): SQL compilation error:
+21:47:21.920645 [error] [MainThread]:   syntax error line 10 at position 4 unexpected 'and'.
+21:47:21.921185 [info ] [MainThread]: 
+21:47:21.921673 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=1 SKIP=0 TOTAL=8
+21:47:21.922168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dbd1cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc99430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110095430>]}

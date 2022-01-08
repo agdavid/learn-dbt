@@ -1,0 +1,87 @@
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('my_first_dbt_model')
+              field: id
+
+  - name: snowflake_customer_purchases
+    description: "The total purchases for each customer in snowflake sample data"
+    columns:
+      - name: c_custkey
+        description: "The unique customer id for this table"
+        tests:
+          - unique
+          - not_null
+      - name: c_name
+        description: "The customer name for this table"
+        tests:
+          - unique
+          - not_null
+      - name: c_nationkey
+        description: "The nation key for this table"
+        tests:
+
+  - name: snowflake_nation_customer_count
+    description: "The total number of customers for each nation in snowflake sample data"
+    columns:
+      - name: n_name
+        description: "The nation name for this table"
+        tests:
+          - unique
+          - not_null
+      - name: n_nationkey
+        description: "The nation key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: snowflake_cumulative_orders_by_date
+    description: "The cumulative sales by order date in snowflake sample data"
+    columns:
+      - name: o_orderdate
+        description: "The order date"
+        tests:
+          - unique
+          - not_null
+      - name: o_totalprice
+        description: "The sales for that date for a specific order"
+        tests:
+
+  - name: incremental_dates
+    description: "The row for eachtime as an incremental model of snowflake sample data"
+
+  - name: playing_with_tests
+    description: "The entire customer table for playing with tests from snowflake sample data"
+    columns:
+      - name: c_custkey
+        tests:
+          - not_null
+          - unique
+      - name: c_mktsegment
+        tests:
+          - accepted_values:
+              values:
+                [
+                  "BUILDING",
+                  "AUTOMOBILE",
+                  "MACHINERY",
+                  "HOUSEHOLD",
+                  "FURNITURE",
+                ]

@@ -1,5 +1,0 @@
-version: 2
-
-models:
-  - name: dates
-    description: "The row for each date as an incremental model of snowflake sample data"

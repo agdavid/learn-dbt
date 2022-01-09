@@ -44,6 +44,7 @@ models:
       # +post-hook: 'grant usage on schema {{target.this}} to role analyst'
       # +post-hook: 'grant select on {{this}} to role analyst'
       +pre-hook: "insert into dbt.audit (model, state, time) values ('{{this.name}}', 'starting model deployment', current_timestamp)"
+      +tags: "nightly"
 
 vars:
   learn_dbt:

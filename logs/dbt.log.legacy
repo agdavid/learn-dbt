@@ -203,3 +203,9 @@
 2022-01-09 20:00:07.640374 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
 2022-01-09 20:01:33.201509 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
 2022-01-09 20:01:37.747053 (Thread-1): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2022-01-09 20:11:40.876307 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2022-01-09 20:11:40.879236 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2022-01-09 20:11:40.881461 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2022-01-09 20:11:40.883659 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2022-01-09 20:11:40.905778 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2022-01-09 20:11:45.168299 (Thread-1): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.

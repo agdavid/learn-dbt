@@ -3,10 +3,14 @@ with sample_orders as (
   from {{ source('sample', 'orders') }}
 )
 
-
-SELECT
+SELECT distinct
     o.o_orderdate,
-    sum(o.o_totalprice) as cumulative_sales
+    sum(o.o_totalprice) over (
+ORDER BY o.o_orderdate) as cumulative_sales
 FROM sample_orders o
-GROUP BY o.o_orderdate
-ORDER BY o.o_orderdate DESC
+
+{% if target.name == 'dev' %}
+WHERE year(o.o_orderdate) = 1996
+{% endif %}
+
+ORDER BY o.o_orderdate

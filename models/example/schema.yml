@@ -84,3 +84,11 @@ models:
                   "HOUSEHOLD",
                   "FURNITURE",
                 ]
+
+sources:
+  - name: sample
+    database: snowflake_sample_data # Tell dbt to look for the source in the "raw" database
+    schema: tpch_sf1 # You wouldn't put your source data in public, would you?
+    tables:
+      - name: customer
+      - name: orders

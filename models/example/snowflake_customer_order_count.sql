@@ -9,4 +9,3 @@ group by
     c.c_custkey,
     c.c_name
 order by total_orders asc
-;

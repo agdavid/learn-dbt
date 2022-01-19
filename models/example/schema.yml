@@ -63,6 +63,18 @@ models:
         description: "The sales for that date for a specific order"
         tests:
 
+  - name: snowflake_customer_order_count
+    description: "The count of orders by customer in snowflake sample data"
+    columns:
+      - name: c_custkey
+        description: "The customer key"
+        tests:
+          - unique
+          - not_null
+      - name: c_name
+        description: "The name of the customer"
+        tests:
+
   - name: playing_with_tests
     description: "The entire customer table for playing with tests from snowflake sample data"
     columns:

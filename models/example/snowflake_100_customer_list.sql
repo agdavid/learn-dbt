@@ -10,3 +10,4 @@ select
     c_birth_month,
     c_birth_year
 from "SNOWFLAKE_SAMPLE_DATA"."TPCDS_SF10TCL"."CUSTOMER"
+where c_email_address is not null
